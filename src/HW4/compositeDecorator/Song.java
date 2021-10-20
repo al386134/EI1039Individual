@@ -8,16 +8,16 @@ public class Song implements SongComponent {
         this.name = name;
         this.artist = artist;
     }
-    
-    @Override
-    public void play() {
-        System.out.println("Escuchando..." + getName() + " BY " + getArtist());
-    }
 
     @Override
+    public String play(){
+        return "Escuchando..." + getName() + " BY " + getArtist();
+    }
+
     public String getName() {
         return this.name;
     }
+
     public String getArtist() {
         return this.artist;
     }

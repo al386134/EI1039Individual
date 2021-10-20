@@ -19,14 +19,15 @@ public class PlayList implements SongComponent {
     }
 
     @Override
-    public void play() {
+    public String play(){
+        String canciones = "";
         for (SongComponent component: playlist) {
-            System.out.println("-----" + getName() + "-----");
-            component.play();
+            canciones += "-----" + getName() + "-----\n";
+            canciones += component.play()+ "\n";
         }
+        return canciones;
     }
 
-    @Override
     public String getName() {
         return this.playlistName;
     }
