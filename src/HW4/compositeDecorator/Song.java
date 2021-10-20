@@ -14,6 +14,7 @@ public class Song implements SongComponent {
         return "Escuchando..." + getName() + " BY " + getArtist();
     }
 
+    @Override
     public String getName() {
         return this.name;
     }
