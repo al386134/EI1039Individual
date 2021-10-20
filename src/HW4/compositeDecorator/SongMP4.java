@@ -10,11 +10,12 @@ public class SongMP4 extends SongDecorator{
         return super.getName();
     }
 
+    @Override
     public String play(){
-        return super.play() + decorateMP4();
+        return super.play() + decorate();
     }
 
-    public String decorateMP4(){
-        return "\nON MP4";
+    public String decorate(){
+        return "\nON MP4\n";
     }
 }

@@ -28,6 +28,7 @@ public class PlayList implements SongComponent {
         return canciones;
     }
 
+    @Override
     public String getName() {
         return this.playlistName;
     }

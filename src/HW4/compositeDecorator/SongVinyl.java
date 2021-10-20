@@ -11,11 +11,12 @@ public class SongVinyl extends SongDecorator{
         return super.getName();
     }
 
+    @Override
     public String play(){
-        return super.play() + decorateVinyl();
+        return super.play() + decorate();
     }
 
-    public String decorateVinyl() {
-        return "\nON vinyl";
+    public String decorate() {
+        return "\nON vinyl\n";
     }
 }
