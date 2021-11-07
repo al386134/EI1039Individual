@@ -10,24 +10,26 @@ import HW5.Ej4.Distance.DistanceManhattan;
 public class DemoStrategySimple {
     public static void main(String[] args) {
         System.out.println("\n--- KNN with Euclidean distance ---");
-        ContextSimple context = new ContextSimple(new ClassifierKnn(new DistanceEuclidean()));
+        ContextSimple context = new ContextSimple(new ClassifierKnn(),new DistanceEuclidean());
         context.run();
         System.out.println("\n--- KNN with Manhattan distance ---");
-        context.getClassifierStrategy().setDistStrategy(new DistanceManhattan());
+        context.setDistStrategy(new DistanceManhattan());
         context.run();
 
         System.out.println("\n--- K-means with Euclidean distance ---");
-        context.setClassifierStrategy(new ClassifierKmeans(new DistanceEuclidean()));
+        context.setClassifierStrategy(new ClassifierKmeans());
+        context.setDistStrategy(new DistanceEuclidean());
         context.run();
         System.out.println("\n--- K-means with Manhattan distance ---");
-        context.getClassifierStrategy().setDistStrategy(new DistanceManhattan());
+        context.setDistStrategy(new DistanceManhattan());
         context.run();
 
         System.out.println("\n--- SOM with Euclidean distance ---");
-        context.setClassifierStrategy(new ClassifierSOM(new DistanceEuclidean()));
+        context.setClassifierStrategy(new ClassifierSOM());
+        context.setDistStrategy(new DistanceEuclidean());
         context.run();
         System.out.println("\n--- SOM with Manhattan distance ---");
-        context.getClassifierStrategy().setDistStrategy(new DistanceManhattan());
+        context.setDistStrategy(new DistanceManhattan());
         context.run();
     }
 }
