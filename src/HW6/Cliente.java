@@ -5,32 +5,31 @@ import HW6.Commands.*;
 public class Cliente {
     public static void main(String[] args) {
 
-        Historico hist = new Historico();
         BeeBot beeBot = new BeeBot();
 
         Invoker invoker = new Invoker();
-        invoker.setComand(new Forward(beeBot,hist));
+        invoker.setComand(new Forward(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Back(beeBot,hist));
+        invoker.setComand(new Back(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Right(beeBot,hist));
+        invoker.setComand(new Right(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Left(beeBot,hist));
+        invoker.setComand(new Left(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Forward(beeBot,hist));
+        invoker.setComand(new Forward(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Forward(beeBot,hist));
+        invoker.setComand(new Forward(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Delete(beeBot,hist));
+        invoker.setComand(new Delete(beeBot));
         invoker.executeCommand();
 
-        invoker.setComand(new Go(beeBot,hist));
+        invoker.setComand(new Go(beeBot));
         invoker.executeCommand();
 
     }
